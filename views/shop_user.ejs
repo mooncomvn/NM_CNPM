@@ -24,7 +24,7 @@
   <script src="https://cdn.datatables.net/1.10.20/css/dataTables.bootstrap4.min.css"></script> -->
   <head>
     <meta charset="UTF-8">
-    <title>Book Store</title>
+    <title>Impression</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="theme-color" content="#03a6f3">
     <link rel="stylesheet" href="../css/bootstrap.min.css">
@@ -81,7 +81,7 @@
         <div class="header-top">
             <div class="container">
                 <div class="row">
-                    <div class="col-md-3"><a href="#" class="web-url">www.bookstore.com</a></div>
+                    <div class="col-md-3"><a href="#" class="web-url">www.impression.com</a></div>
                     <div class="col-md-6">
                         </div>
                     <div class="col-md-3">
@@ -103,7 +103,7 @@
                                 <a href="index.html/<%- char.id %>" class="nav-link">Home</a>
                             </li>
                             <li class="navbar-item active">
-                                <a href="shop.html?user=<%- char.id %>" class="nav-link">Shop</a>
+                                <a href="shop.html?user=<%- char.id %>" class="nav-link">Event</a>
                             </li>
                             <li class="navbar-item">
                                 <a href="about.html/<%- char.id %>" class="nav-link">About</a>
@@ -132,21 +132,18 @@
         <hr>
         <a href="shop.html/categ?user=<%-char.id %>&categ=kinh-te" class="w3-bar-item w3-button">Kinh tế</a>
         <a href="shop.html/categ?user=<%-char.id %>&categ=ky-nang-song" class="w3-bar-item w3-button">Kỹ năng sống</a>
-        <a href="shop.html/categ?user=<%-char.id %>&categ=kinh-di" class="w3-bar-item w3-button">Kinh dị</a>
         <a href="shop.html/categ?user=<%-char.id %>&categ=lich-su" class="w3-bar-item w3-button">Lịch sử</a>
-        <a href="shop.html/categ?user=<%-char.id %>&categ=tieu-thuyet" class="w3-bar-item w3-button">Tiểu thuyết</a>
         <a href="shop.html/categ?user=<%-char.id %>&categ=ngoai-ngu" class="w3-bar-item w3-button">Ngoại ngữ</a>
         <a href="shop.html/categ?user=<%-char.id %>&categ=thieu-nhi" class="w3-bar-item w3-button">Thiếu nhi</a>
         <a href="shop.html/categ?user=<%-char.id %>&categ=van-hoc" class="w3-bar-item w3-button">Văn học</a>
         <a href="shop.html/categ?user=<%-char.id %>&categ=y-hoc" class="w3-bar-item w3-button">Y học</a>
-        <a href="shop.html/categ?user=<%-char.id %>&categ=truyen-tranh" class="w3-bar-item w3-button">Truyện tranh</a>
         <hr>
       </div>
       
     <div class="breadcrumb">
         <div class="container">
             <a class="breadcrumb-item" href="/user/index.html/<%-char.id%>">Home</a>
-            <span class="breadcrumb-item active">Shop</span>
+            <span class="breadcrumb-item active">Event</span>
         </div>
     </div>
     <div class="w3-teal">
@@ -156,12 +153,12 @@
         <div class="container">
             <input type="text" id="myInput2" onkeyup="myFunction()" placeholder="Search for anything...">
             <div class="row">
-                <div class="col-md-3"><h2>new releases</h2></div>
+                <div class="col-md-3"><h2>Coming Sooon</h2></div>
             </div>
             <div class="recomended-sec">
                 <div class="row">
                     <% var i=1; data.rows.forEach(function(item){ %>
-                        <% if(item.type == 'New'){%>
+                        <% if(item.type == 'Soon'){%>
                             <% if(i<5) {%>
                             <%i=i+1;%>
                                 <div class="col-lg-3 col-md-6">
@@ -178,7 +175,7 @@
 
             </div>
             <div class="row">
-                <div class="col-md-3"><h2>All Book</h2></div>
+                <div class="col-md-3"><h2>All Event</h2></div>
             </div>
             <div class="recent-book-sec">
                 <div id="myTable2"  class="row">
@@ -219,10 +216,10 @@
                 <div class="col-md-4">
                     <div class="address">
                         <h4>Our Address</h4>
-                        <h6>The BookStore Theme, 4th Store
+                        <h6>The Impression Theme, 4th Store
                         Beside that building, USA</h6>
                         <h6>Call : 800 1234 5678</h6>
-                        <h6>Email : info@bookstore.com</h6>
+                        <h6>Email : info@impression.com</h6>
                     </div>
                     <div class="timing">
                         <h4>Timing</h4>
@@ -235,22 +232,21 @@
                     <div class="navigation">
                         <h4>Navigation</h4>
                         <ul>
-                            <li><a href="index.html/<%- char.id %>">Home</a></li>
-                            <li><a href="about.html/<%- char.id %>">About Us</a></li>
-                            <li><a href="shop.html?user=<%- char.id %>">Products</a></li>
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="about.html">About Us</a></li>
+                            <li><a href="shop.html">Products</a></li>
                         </ul>
                     </div>
                     <div class="navigation">
                         <h4>Help</h4>
                         <ul>
-                            <li><a href="faq.html/<%- char.id %>">FAQ’s</a></li>
+                            <li><a href="faq.html">FAQ’s</a></li>
                         </ul>
                     </div>
                 </div>
                 <div class="col-md-5">
                     <div class="form">
                         <h3>Liên hệ với chúng tôi</h3>
-
                         <form>
                             <div class="row">
                                 <div class="col-md-6">
@@ -275,7 +271,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col-md-6">
-                        <h5>(C) 2017. All Rights Reserved. BookStore Wordpress Theme</h5>
+                        <h5>(C) 2017. All Rights Reserved. Impression Wordpress Theme</h5>
                     </div>
                     <div class="col-md-6">
                         <div class="share align-middle">

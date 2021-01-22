@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Book Store</title>
+    <title>Impression</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="theme-color" content="#03a6f3">
     <link rel="stylesheet" href="../../css/bootstrap.min.css">
@@ -38,7 +38,7 @@
         <div class="header-top">
             <div class="container">
                 <div class="row">
-                    <div class="col-md-3"><a href="#" class="web-url">www.bookstore.com</a></div>
+                    <div class="col-md-3"><a href="#" class="web-url">www.impression.com</a></div>
                     <div class="col-md-6">
                         </div>
                     <div class="col-md-3">
@@ -60,7 +60,7 @@
                                 <a href="../index.html/<%- char.id %>" class="nav-link">Home</a>
                             </li>
                             <li class="navbar-item">
-                                <a href="../shop.html?user=<%- char.id %>" class="nav-link">Shop</a>
+                                <a href="../shop.html?user=<%- char.id %>" class="nav-link">Event</a>
                             </li>
                             <li class="navbar-item">
                                 <a href="../about.html/<%- char.id %>" class="nav-link">About</a>
@@ -70,7 +70,6 @@
                             </li>
                             <li class="navbar-item">
                                 <a href="../dashboard/<%- char.id %>"><img src="/upload/<%- char.image %>" alt="Avatar" class="avatar"></a>
-                                <span class="quntity text-danger"><%-char.book.length%></span>
                             </li>
                             <li class="navbar-item">
                                 <a href="../../login.html" class="nav-link">Logout</a>
@@ -86,7 +85,7 @@
     <section>
         <div class="container">
             <div class="title recomended-sec" >
-                <a href="/user/dashboard/<%- char.id %>"><h2>DashBoard</h2></a>  <a href=""><h2>BOOKSTORE CART</h2></a>
+                <a href="/user/dashboard/<%- char.id %>"><h2>DashBoard</h2></a>  <a href=""><h2>Impression CART</h2></a>
                 <hr>
             </div>
             
@@ -98,9 +97,9 @@
                                 <thead>
                                     <tr>
                                         <th scope="col"> </th>
-                                        <th scope="col">Sách</th>
-                                        <th scope="col">Loại</th>
-                                        <th scope="col" class="text-center">Giá</th>
+                                        <th scope="col">Tên</th>
+                                        <th scope="col">Thể loại</th>
+                                        <th scope="col" class="text-center">Giá vé</th>
                                         <th> </th>
                                     </tr>
                                 </thead>
@@ -111,7 +110,7 @@
                                                 <% money = parseInt(money) + parseInt(item.cur_cost); %>
                                             <tr>
                                                 <td><img id="img_cart" src="/upload/<%= item.image %>" alt="img"></td>
-                                                <td><%= item.name %></td>
+                                                <td><a href="../../product/?user=<%- char.id %>&product=<%- item.id %>"><%= item.name %></a></td>
                                                 <td><%= item.categ %></td>
                                                 <td class="text-center"><%= item.cur_cost %></td>
                                                 <td class="text-right">
@@ -135,7 +134,7 @@
                     <div class="col mb-2">
                         <div class="row">
                             <div class="col-sm-12  col-md-6">
-                                <a href="../shop.html?user=<%- char.id %>"><button class="btn btn-block btn-light">Tiếp tục Shopping</button></a>
+                                <a href="../shop.html?user=<%- char.id %>"><button class="btn btn-block btn-light">Tiếp tục</button></a>
                                 
                             </div>
                             <div class="col-sm-12 col-md-6 text-right">
@@ -149,19 +148,16 @@
             </section>
             
     </section>
-    
-    
-    
     <footer>
         <div class="container">
             <div class="row">
                 <div class="col-md-4">
                     <div class="address">
                         <h4>Our Address</h4>
-                        <h6>The BookStore Theme, 4th Store
+                        <h6>The Impression Theme, 4th Store
                         Beside that building, USA</h6>
                         <h6>Call : 800 1234 5678</h6>
-                        <h6>Email : info@bookstore.com</h6>
+                        <h6>Email : info@impression.com</h6>
                     </div>
                     <div class="timing">
                         <h4>Timing</h4>
@@ -174,15 +170,15 @@
                     <div class="navigation">
                         <h4>Navigation</h4>
                         <ul>
-                            <li><a href="../index.html/<%- char.id %>">Home</a></li>
-                            <li><a href="../about.html/<%- char.id %>">About Us</a></li>
-                            <li><a href="../shop.html?user=<%- char.id %>">Products</a></li>
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="about.html">About Us</a></li>
+                            <li><a href="shop.html">Products</a></li>
                         </ul>
                     </div>
                     <div class="navigation">
                         <h4>Help</h4>
                         <ul>
-                            <li><a href="../faq.html/<%- char.id %>">FAQ’s</a></li>
+                            <li><a href="faq.html">FAQ’s</a></li>
                         </ul>
                     </div>
                 </div>
@@ -213,7 +209,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col-md-6">
-                        <h5>(C) 2017. All Rights Reserved. BookStore Wordpress Theme</h5>
+                        <h5>(C) 2017. All Rights Reserved. Impression Wordpress Theme</h5>
                     </div>
                     <div class="col-md-6">
                         <div class="share align-middle">
