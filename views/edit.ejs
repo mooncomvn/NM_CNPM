@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Book Store Admin</title>
+    <title>Impression Admin</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="theme-color" content="#03a6f3">
     <link rel="stylesheet" href="../css/bootstrap.min.css">
@@ -30,7 +30,7 @@
         <div class="header-top">
             <div class="container">
                 <div class="row">
-                    <div class="col-md-3"><a href="#" class="web-url">www.bookstore.com</a></div>
+                    <div class="col-md-3"><a href="#" class="web-url">www.impression.com</a></div>
                     <div class="col-md-6">
                         </div>
                     <div class="col-md-3">
@@ -49,7 +49,7 @@
                     <div class="collapse navbar-collapse" id="navbarSupportedContent">
                         <ul class="navbar-nav ml-auto">
                             <li class="navbar-item active">
-                                <a href="/admin" class="nav-link">Book</a>
+                                <a href="/admin" class="nav-link">Event</a>
                             </li>
                             <li class="navbar-item">
                                 <a href="/user" class="nav-link">User</a>
@@ -65,7 +65,7 @@
     <section>
         <div class="container">
             <div class="title recomended-sec" >
-                <h2>Edit Book</h2>
+                <h2>Edit Impression</h2>
                 <hr>
             </div>
             <div class="row">
@@ -77,7 +77,7 @@
                             <input type="text" class="form-control" id="name" name="name" value="<%- data.name %>">
                         </div>
                         <div class="form-group col-md-4">
-                            <label for="form-title">Author:</label>
+                            <label for="form-title">Speaker:</label>
                             <input type="text" class="form-control" id="author" name="author" value="<%- data.author %>">
                         </div>
                         <div class="form-group col-md-2">
@@ -85,14 +85,27 @@
                             <br>
                             <select id="type" name="type" value="<%- data.type %>">
                                 <option value="<%- data.type %>"><%- data.type %></option>
-                                <option value="New">New</option>
-                                <option value="Best">Best</option>
-                                <option value="Sale">Sale</option>
+                                <option value="Soon">Soon</option>
+                                <option value="Doing">Doing</option>
                             </select>
                             <!-- <input type="text" class="form-control" id="type" name="type" value="<%- data.type %>"> -->
                         </div>
                     </div>
+                    <div class="row">
+                        <div class="form-group col-md-4">
+                            <label for="form-title">Time:</label>
+                            <input type="text" class="form-control" id="time" name="time" value="<%- data.time %>">
+                        </div>
+                        <div class="form-group col-md-4">
+                            <label for="form-title">Where:</label>
+                            <input type="text" class="form-control" id="where" name="where" value="<%- data.local %>">
+                        </div>
+                        <div class="form-group col-md-4">
+                            <label for="form-title">Audience:</label>
+                            <input type="text" class="form-control" id="aud" name="aud" value="<%- data.audi %>">
+                        </div>
                         
+                    </div>
                     <div class="row">
                         <div class="form-group col-md-4">
                             <label for="form-key">Historical Cost:</label>
@@ -110,14 +123,11 @@
                                     <option value="<%- data.categ %>"><%- data.categ %></option>
                                     <option value="Kinh tế">Kinh tế</option>
                                     <option value="Kỹ năng sống">Kỹ năng sống</option>
-                                    <option value="Kinh dị">Kinh dị</option>
                                     <option value="Lịch sử">Lịch sử</option>
-                                    <option value="Tiểu thuyết">Tiểu thuyết</option>
                                     <option value="Ngoại ngữ">Ngoại ngữ</option>
                                     <option value="Thiếu nhi">Thiếu nhi</option>
                                     <option value="Văn học">Văn học</option>
                                     <option value="Y học">Y học</option>
-                                    <option value="Truyện tranh">Truyện tranh</option>
                                 </select>
                                 <!-- <input type="text" class="form-control" id="categ" name="categ" value="<%- data.categ %>"> -->
                             </div>
@@ -155,10 +165,10 @@
                 <div class="col-md-4">
                     <div class="address">
                         <h4>Our Address</h4>
-                        <h6>The BookStore Theme, 4th Store
+                        <h6>The Impression Theme, 4th Store
                         Beside that building, USA</h6>
                         <h6>Call : 800 1234 5678</h6>
-                        <h6>Email : info@bookstore.com</h6>
+                        <h6>Email : info@impression.com</h6>
                     </div>
                     <div class="timing">
                         <h4>Timing</h4>
@@ -171,15 +181,15 @@
                     <div class="navigation">
                         <h4>Navigation</h4>
                         <ul>
-                            <li><a href="../index.html">Home</a></li>
-                            <li><a href="../about.html">About Us</a></li>
-                            <li><a href="../shop.html">Products</a></li>
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="about.html">About Us</a></li>
+                            <li><a href="shop.html">Products</a></li>
                         </ul>
                     </div>
                     <div class="navigation">
                         <h4>Help</h4>
                         <ul>
-                            <li><a href="../faq.html">FAQ’s</a></li>
+                            <li><a href="faq.html">FAQ’s</a></li>
                         </ul>
                     </div>
                 </div>
@@ -210,7 +220,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col-md-6">
-                        <h5>(C) 2017. All Rights Reserved. BookStore Wordpress Theme</h5>
+                        <h5>(C) 2017. All Rights Reserved. Impression Wordpress Theme</h5>
                     </div>
                     <div class="col-md-6">
                         <div class="share align-middle">
@@ -230,6 +240,5 @@
     <script type="text/javascript" src="js/owl.carousel.min.js"></script>
     <script src="js/custom.js"></script>
 </body>
-
 </html>
 

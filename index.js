@@ -19,7 +19,7 @@ app.listen(3000);
 var pg = require("pg");
 var config = {
     user: 'postgres',
-    database: 'book_shop',
+    database: 'postgres',
     password: '0918303693',
     host: 'localhost',
     port: 5432,
@@ -732,7 +732,7 @@ app.post("/add",urlencodeParser, function(req,res){
                 if(err){
                     return console.error('error fetching client from pool', err);
                 }
-                var sql = "insert into book (name,detail,author,pre_cost,cur_cost,type,categ) values ('"+req.body.name+"','"+req.body.detail+"','"+req.body.author+"','"+req.body.pre_cost+"','"+req.body.cur_cost+"','"+req.body.type+"','"+req.body.categ+"')";
+                var sql = "insert into book (name,detail,author,pre_cost,cur_cost,type,categ,time,local,audi) values ('"+req.body.name+"','"+req.body.detail+"','"+req.body.author+"','"+req.body.pre_cost+"','"+req.body.cur_cost+"','"+req.body.type+"','"+req.body.categ+"','"+req.body.time+"','"+req.body.local+"','"+req.body.audi+"')";
                 client.query(sql, function(err, result){
                     done();
                     if(err){
@@ -748,7 +748,7 @@ app.post("/add",urlencodeParser, function(req,res){
                 if(err){
                     return console.error('error fetching client from pool', err);
                 }
-                var sql = "insert into book (name,image,detail,author,pre_cost,cur_cost,type,categ) values ('"+req.body.name+"','"+req.file.originalname+"','"+req.body.detail+"','"+req.body.author+"','"+req.body.pre_cost+"','"+req.body.cur_cost+"','"+req.body.type+"','"+req.body.categ+"')";
+                var sql = "insert into book (name,detail,author,pre_cost,cur_cost,type,categ,time,local,audi,image) values ('"+req.body.name+"','"+req.body.detail+"','"+req.body.author+"','"+req.body.pre_cost+"','"+req.body.cur_cost+"','"+req.body.type+"','"+req.body.categ+"','"+req.body.time+"','"+req.body.local+"','"+req.body.audi+"','"+req.file.originalname+"')";
                 client.query(sql, function(err, result){
                     done();
                     if(err){
